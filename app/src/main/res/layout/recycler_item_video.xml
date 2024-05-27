@@ -1,0 +1,23 @@
+<!-- res/layout/item_video.xml -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+   >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/videoThumbnail"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/videoAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author"/>
+</LinearLayout>
+
+</layout>

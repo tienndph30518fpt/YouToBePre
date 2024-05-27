@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">YouToBePre</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="Home">Home</string>
+    <string name="Trending">Trending</string>
+    <string name="Library">Library</string>
+    <string name="Me">Me</string>
+
+    <string name="Music">Music</string>
+    <string name="Gaming">Gaming</string>
+    <string name="Movies">Movies</string>
+    <string name="SearchOnYTB">Search on YouTube</string>
+
+    <string name="update">Update</string>
+    <string name="please_update_title">New Update!</string>
+    <string name="please_update_description">Please update to the latest version for a better experience.</string>
+
+    <string name="desc_images" translatable="false">[image]</string>
+
+    <string name="Login">Login</string>
+    <string name="Logout">Logout</string>
+    <string name="DescriptionLogin">Sign in now to see the channels you\'ve subscribed to and your playlists.</string>
+
+    <string name="Setting">Setting</string>
+    <string name="ShareApp">Share apps</string>
+    <string name="CheckForUpdate">Check for update</string>
+    <string name="Policy">Privacy policy</string>
+
+    <string name="Subscribe">Subscribe</string>
+    <string name="Subscribed">Subscribed</string>
+
+    <string name="press_more_to_exits">Press again to exit!</string>
+
+    <string name="ok_button" translatable="false">Ok button click</string>
+    <string name="cancel_button" translatable="false">Cancel button click</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
