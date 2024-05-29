@@ -10,9 +10,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.duytien.youtobepre.Model.Item_setting
 import com.duytien.youtobepre.Model.Login_Setting
 import com.duytien.youtobepre.R
 import com.duytien.youtobepre.apdapter.Login_setting_Adapter
+import com.duytien.youtobepre.databinding.FragmentLibraryBinding
 
 
 class LibraryFragment : Fragment() {
@@ -25,23 +27,26 @@ class LibraryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val view = inflater.inflate(R.layout.fragment_library, container, false)
-//        recyclerView = view.findViewById(R.id.recyclerViewLogin)
-//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val view = inflater.inflate(R.layout.fragment_library, container, false)
+        recyclerView = view.findViewById(R.id.recyclerViewLogin)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
         return view
     }
 //
 //
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        val itemList = listOf(
-//            Login_Setting("Description 1"),
-//        )
-//
-//     adapter = Login_setting_Adapter(itemList)
-//        recyclerView.adapter = adapter
-//
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val itemList = listOf(
+            Login_Setting("PHim"),
+            Item_setting("Cài đặt", R.drawable.home),
+            Item_setting("Chia sẻ ứng dụng", R.drawable.home),
+            Item_setting("Kiểm tra bản cập nhật", R.drawable.explore),
+            Item_setting("Chính sách bảo mật", R.drawable.account),
+        )
+
+    adapter = Login_setting_Adapter(itemList)
+    recyclerView.adapter = adapter
+    }
 
 }
