@@ -1,5 +1,6 @@
 package com.duytien.youtobepre
 
+import ExploreFragment
 import HomeFragment
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -8,7 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import com.duytien.youtobepre.button_navigation.ExploreFragment
+
 
 import com.duytien.youtobepre.button_navigation.LibraryFragment
 import com.duytien.youtobepre.button_navigation.SubscriptionsFragment

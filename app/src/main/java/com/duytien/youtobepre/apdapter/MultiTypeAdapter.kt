@@ -50,30 +50,45 @@ class MultiTypeAdapter(private val dataList: List<Any>) : RecyclerView.Adapter<R
     }
 
     inner class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val thumbnail = itemView.findViewById<ImageView>(R.id.videoThumbnail)
-        private val author = itemView.findViewById<TextView>(R.id.videoAuthor)
-
+        private val thumbnail = itemView.findViewById<ImageView>(R.id.thumbnail_img)
+        private val author = itemView.findViewById<TextView>(R.id.tv_length_video)
+        private val channel_img = itemView.findViewById<ImageView>(R.id.channel_img)
+        private val title = itemView.findViewById<TextView>(R.id.tv_tittle)
+        private val description = itemView.findViewById<TextView>(R.id.tv_description)
         fun bind(videoData: VideoData) {
             thumbnail.setImageResource(videoData.thumbnails)
             author.text = videoData.author
+            channel_img.setImageResource(videoData.channel_img)
+            title.text = videoData.title
+            description.text = videoData.description
         }
     }
 
     inner class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val image = itemView.findViewById<ImageView>(R.id.imageRes)
-        private val description = itemView.findViewById<TextView>(R.id.imageDescription)
+        private val image = itemView.findViewById<ImageView>(R.id.thumbnail_image_playlist)
+        private val videoCountPlay = itemView.findViewById<TextView>(R.id.tv_video_count_playlist)
+        private val description = itemView.findViewById<TextView>(R.id.tv_description_playlist)
+        private val title_playlist = itemView.findViewById<TextView>(R.id.tv_title_playlist)
 
         fun bind(playData: PlayData) {
             image.setImageResource(playData.imageResId)
             description.text = playData.description
+            videoCountPlay.text = playData.videoCountPlay
+            title_playlist.text = playData.title
         }
     }
 
     inner class TextViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val content = itemView.findViewById<TextView>(R.id.textContent)
-
+        private val imageChannel = itemView.findViewById<ImageView>(R.id.image_channel)
+        private val author = itemView.findViewById<TextView>(R.id.textContent)
+        private val subscribe = itemView.findViewById<TextView>(R.id.tv_subscription)
+        private val count_video = itemView.findViewById<TextView>(R.id.tv_video_count)
         fun bind(channelData: ChannelData) {
-            content.text = channelData.content
+            author.text = channelData.author
+            imageChannel.setImageResource(channelData.imageChannel)
+            subscribe.text = channelData.subscribe
+            count_video.text = channelData.count_video
+            // còn thiếu đăng ký người dùng
         }
     }
 }

@@ -55,4 +55,7 @@ dependencies {
     implementation ("com.google.android.material:material:1.8.0")
     //
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation ("com.google.android.material:material:1.4.0")
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
 }

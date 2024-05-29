@@ -1,23 +1,82 @@
-<!-- res/layout/item_video.xml -->
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-   >
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/videoThumbnail"
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-
-    <TextView
-        android:id="@+id/videoAuthor"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Author"/>
-</LinearLayout>
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_item_video">
+
+            <ImageView
+                android:id="@+id/thumbnail_img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/load_mipmap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tv_length_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:background="@color/time"
+                android:padding="4dp"
+                android:text="00:00:00"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@id/thumbnail_img"
+                app:layout_constraintEnd_toEndOf="@id/thumbnail_img"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintTop_toTopOf="@id/thumbnail_img"
+                app:layout_constraintVertical_bias="0.95" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/channel_img"
+              android:layout_margin="12dp"
+
+              android:layout_width="40dp"
+              android:layout_height="40dp"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_tittle"
+                    android:maxLines="2"
+                    android:textSize="16sp"
+                    android:text="CHUNG CỰC BÚT KÝ - Tập 34 | Siêu Phẩm Phim Hành Động Thám Hiểm Cực Hot | iQIYI Phim Thuyết Minh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:text="iQIYI Phim Thuyết Minh"
+                    android:layout_marginTop="4dp"
+                    android:textSize="13sp"
+                    android:maxLines="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </layout>

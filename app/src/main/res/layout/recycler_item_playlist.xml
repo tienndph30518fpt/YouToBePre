@@ -1,18 +1,100 @@
-<!-- res/layout/item_image.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imageRes"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
-
-    <TextView
-        android:id="@+id/imageDescription"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description"/>
-</LinearLayout>
+        android:background="@color/background_item_video">
+
+        <!-- CardView to hold the video thumbnail -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/thumbnail_image_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/desc_images"
+                android:scaleType="centerCrop"
+               android:src="@drawable/load_mipmap" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#50000000"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,5:3.5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_video_count_playlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100 videos"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="39dp"
+                        android:layout_height="39dp"
+                        android:src="@drawable/ic_playlist"
+                        app:tint="@android:color/white" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Video title -->
+        <TextView
+            android:id="@+id/tv_title_playlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="CHUNG CỰC BÚT KÝ - Tập 34 | Siêu Phẩm Phim Hành Động Thám Hiểm Cực Hot | iQIYI Phim Thuyết Minh"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+        <!-- Video description -->
+        <TextView
+            android:id="@+id/tv_description_playlist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="2"
+            android:text="iQIYI Phim Thuyết Minh"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_playlist" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

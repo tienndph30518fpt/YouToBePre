@@ -14,13 +14,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
-        android:src="@mipmap/ic_launcher"
+
 
         />
 
     <LinearLayout
         android:layout_marginTop="12dp"
-        android:layout_width="305dp"
+        android:layout_width="315dp"
         android:layout_marginLeft="15dp"
         android:orientation="vertical"
         android:layout_height="wrap_content">
@@ -35,7 +35,7 @@
             android:text="Phim Hành Động Hay"/>
 
         <LinearLayout
-            android:layout_width="305dp"
+            android:layout_width="315dp"
             android:layout_marginTop="2dp"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
@@ -62,8 +62,9 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btnSubscribeChannel"
                 android:text="@string/Subscribe"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="18dp"
                 android:backgroundTint="#FFCCFF"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"/>
