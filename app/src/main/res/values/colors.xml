@@ -33,4 +33,11 @@
     #AAAAAA
     <color name="background_item_video">#F6F8F8</color>
     <color name="lineViewColor">#E9E9E9</color>
+    <color name="switch_track_color">#A5D6A7</color> <!-- Màu nền xanh lá của track -->
+    <color name="switch_thumb_color">#4CAF50</color>
+    <color name="switch_border_color">#FF5722</color>
+    <color name="switch_track_checked_color">#A5D6A7</color> <!-- Màu track khi bật -->
+    <color name="switch_track_unchecked_color">#E0E0E0</color> <!-- Màu track khi tắt -->
+    <color name="switch_thumb_checked_color">#4CAF50</color> <!-- Màu thumb khi bật -->
+    <color name="switch_thumb_unchecked_color">#FFFFFF</color> <!-- Màu thumb khi tắt -->
 </resources>
